@@ -1,0 +1,404 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+
+/* 
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dạng (kiểu chữ, hình tròn, hình vuông,...)
+*/
+
+#main {
+
+}
+
+#header {
+    height: 50px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+#nav {
+    list-style: none;
+    display: flex;
+    /* height: 100%; */
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav li:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+#nav li:hover a {
+    color: #000;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 50px;
+    font-size: 15px;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding: 0 24px;
+}
+
+#nav > li:hover > .subnav {
+    display: block;
+}
+
+#nav .subnav {
+    background-color: #fff;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    min-width: 160px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+#nav .subnav li {
+
+}
+
+#nav .subnav li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 16px;
+    display: inline-block;
+    width: 100%;
+    line-height: 22.5px;
+}
+
+#header__search .icon-search {
+    color: #fff;
+    padding: 0 24px;
+    line-height: 50px;
+}
+
+#header__search:hover .icon-search {
+    color: #fff;
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#slider {
+    margin-top: 50px;
+    position: relative;
+}
+
+#slider img {
+    display: block;
+    width: 100%;
+}
+
+#slider .slider__des {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 32px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#slider .slider__des .slider__location {
+    margin: 25px 0;
+    font-size: 24px;
+}
+
+#slider .slider__des .slider__text {
+
+}
+
+#content {
+
+}
+
+#content .content__title {
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#content .content__subTitle {
+    margin: 15px 0;
+    opacity: 0.6;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+#band, 
+#tour .tour__container, 
+#contact {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+#band {
+
+}
+
+#band .band__desc {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 15px 0;
+}
+
+#band .band__list__member {
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.band__list__member .band__member .member__name {
+    margin: 15px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+.band__list__member .band__member img {
+    display: block;
+    width: 153px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+#tour {
+    background-color: #000;
+}
+
+#tour .tour__container {
+    color: #fff;
+}
+
+#tour .tour__container .tour__months {
+    background-color: #fff;
+    list-style: none;
+    color: #757575;
+    border: 1px solid #ccc;
+}
+
+.tour__container .tour__months li {
+    padding: 8px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-bottom: 1px solid #ddd;
+}
+
+.tour__months li .tour__month {
+    color: #fff;
+}
+
+.tour__months--soldOut {
+    padding: 4px 8px;
+    margin-left: 16px;
+    background-color: #f44336;
+}
+
+.tour__months--quantity {
+    float: right;
+    border-radius: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 16px;
+    background-color: #000;
+    text-align: center;
+}
+
+.tour__container .tour__list__location {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -16px;
+    padding: 32px 8px;
+}
+
+.tour__container .tour__list__location .tour__ticket {
+    color: #000;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.tour__ticket img {
+    display: block;
+    width: 245px;
+}
+
+.tour__ticket img:hover {
+    opacity: 0.6;
+}
+
+.tour__ticket .tour__info {
+    background-color: #fff;
+    padding: 0.15px 16px;
+}
+
+.tour__ticket .tour__info .tour__location,
+.tour__ticket .tour__info .tour__dates,
+.tour__ticket .tour__info .tour__desc {
+    font-size: 15px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.tour__ticket .tour__info .tour__dates {
+    opacity: 0.6;
+}
+
+.tour__ticket .tour__info .tour__buyTicket {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.tour__ticket .tour__info .tour__buyTicket:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+
+#contact {
+
+}
+
+#contact .contact__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+
+#contact .contact__container .contact__info {
+    flex: 1;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.contact__info .contact__info__item .contact__info__icon {
+    min-width: 30px;
+}
+
+#contact .contact__container .contact__form {
+    flex: 1;
+}
+
+.contact__form input {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact__form .form__line--2 {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    /* padding: 0 8px; */
+    margin-bottom: 8px;
+}
+
+.contact__form .form__line--2 input {
+    width: calc((100% / 2) - 8px);
+}
+
+.contact__form .form__line {
+
+}
+
+.contact__form .form__line input {
+    width: 100%;
+}
+
+.contact__form .form__submit {
+    float: right;
+    margin: 16px 0;
+    padding: 8px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact__form .form__submit:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+#map {
+
+}
+
+#map img {
+    display: block;
+    width: 100%;
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    opacity: 0.6;
+}
+
+#footer .socialMedia {
+    font-size: 24px;
+}
+
+#footer .socialMedia i:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#footer .copyright {
+    margin: 15px 0;
+}
+
+#footer .copyright a {
+    color: #000;
+}
+
+#footer .copyright a:hover {
+    opacity: 0.8;
+}
